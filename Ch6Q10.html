@@ -74,17 +74,19 @@ img {
 
 </div>
 <script>
-//prevents submission if username and password are not filled out
+//validates submission 
 function submission() {
 	var username = document.getElementById("username").value;
 	var x = document.getElementById('password').value;
 	var y = document.getElementById('password2').value;
+//prevents submission if username and password are not filled out
 	if (username != "" && x != "" && y != "") {
-			vPass();
+		vPass();
 	}
+//prevents submission if passwords don't match
 function vPass (){
 	if (x == y) {
-			document.getElementById("submit").disabled = false;
+		document.getElementById("submit").disabled = false;
 	}
 }
 }
